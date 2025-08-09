@@ -55,26 +55,31 @@
     </div>
 
     <div id="pdf-content" class="printable-area">
-        <div class="pdf-header">
+        <div class="pdf-title-header">
+            <h2>Oxford International School Bishkek Teacher Card</h2>
+        </div>
+        
+        <div class="pdf-main-content">
             <img id="pdf-img" src="" alt="Profile Picture">
-            <h1>Staff Profile</h1>
+            
+            <div class="pdf-info-fields">
+                <p><strong>Name:</strong> <span id="pdf-name"></span></p>
+                <p><strong>Nationality:</strong> <span id="pdf-nationality"></span></p>
+                <p><strong>Passport ID:</strong> <span id="pdf-passportId"></span></p>
+                <p><strong>Phone Number:</strong> <span id="pdf-phone"></span></p>
+                <p><strong>Address:</strong> <span id="pdf-address"></span></p>
+                <hr>
+                <h3>Academic Qualifications</h3>
+                <p id="pdf-qualifications"></p>
+                <hr>
+                <h3>Teaching Branches</h3>
+                <p id="pdf-branches"></p>
+                <hr>
+                <h3>Extra Talents</h3>
+                <p id="pdf-talents"></p>
+            </div>
         </div>
-        <div class="pdf-body">
-            <p><strong>Name:</strong> <span id="pdf-name"></span></p>
-            <p><strong>Nationality:</strong> <span id="pdf-nationality"></span></p>
-            <p><strong>Passport ID:</strong> <span id="pdf-passportId"></span></p>
-            <p><strong>Phone Number:</strong> <span id="pdf-phone"></span></p>
-            <p><strong>Address:</strong> <span id="pdf-address"></span></p>
-            <hr>
-            <h3>Academic Qualifications</h3>
-            <p id="pdf-qualifications"></p>
-            <hr>
-            <h3>Teaching Branches</h3>
-            <p id="pdf-branches"></p>
-            <hr>
-            <h3>Extra Talents</h3>
-            <p id="pdf-talents"></p>
-        </div>
+
         <div class="pdf-footer">
             Generated on: <span id="pdf-date"></span>
         </div>
