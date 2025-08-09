@@ -1,0 +1,159 @@
+/* General Body and Form Styling */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7f8c8d;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.image-preview {
+    max-width: 150px;
+    max-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+
+/* --- HIDDEN PRINTABLE AREA STYLING --- */
+/* This is styled to look like an A4 paper. It's hidden from view. */
+.printable-area {
+    display: none; /* This hides it from the user's view */
+    width: 210mm; /* A4 width */
+    height: 297mm; /* A4 height */
+    box-sizing: border-box;
+    padding: 15mm;
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+    background: #fff;
+}
+
+.printable-area h1 {
+    text-align: left;
+    color: #000;
+    margin: 0;
+    padding-bottom: 5mm;
+    border-bottom: 2px solid #000;
+}
+
+.printable-area h3 {
+    margin-top: 8mm;
+    margin-bottom: 2mm;
+    color: #000;
+}
+
+.pdf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.pdf-header img {
+    max-width: 40mm;
+    max-height: 50mm;
+    border: 1px solid #ccc;
+    /* This places the image on the right corner of the "paper" */
+    float: right; 
+}
+
+.pdf-body p {
+    text-align: left;
+    margin: 3mm 0;
+    font-size: 12pt;
+    color: #000;
+    white-space: pre-wrap; /* Preserves line breaks from textareas */
+}
+
+.pdf-body strong {
+    display: inline-block;
+    width: 150px; /* Aligns the values */
+}
+
+.pdf-body hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 5mm 0;
+}
+
+.pdf-footer {
+    position: absolute;
+    bottom: 10mm;
+    left: 15mm;
+    font-size: 9pt;
+    color: #888;
+}
