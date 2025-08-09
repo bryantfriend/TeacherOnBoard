@@ -1,4 +1,4 @@
-/* General Body and Form Styling */
+/* General Body and Form Styling (No Changes Here) */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background-color: #f4f7f9;
@@ -90,61 +90,76 @@ button:hover {
 }
 
 
-/* --- HIDDEN PRINTABLE AREA STYLING --- */
-/* This is styled to look like an A4 paper. It's hidden from view. */
+/* =====================================================
+--- UPDATED HIDDEN PRINTABLE AREA STYLING ---
+=====================================================
+*/
 .printable-area {
-    display: none; /* This hides it from the user's view */
-    width: 210mm; /* A4 width */
-    height: 297mm; /* A4 height */
+    display: none;
+    width: 210mm; 
+    height: 297mm;
     box-sizing: border-box;
     padding: 15mm;
     font-family: 'Times New Roman', Times, serif;
     color: #000;
     background: #fff;
+    position: relative; /* Needed for footer positioning */
 }
 
-.printable-area h1 {
-    text-align: left;
-    color: #000;
-    margin: 0;
-    padding-bottom: 5mm;
+/* NEW: Styles for the centered main title */
+.pdf-title-header {
+    text-align: center;
+    margin-bottom: 10mm;
     border-bottom: 2px solid #000;
+    padding-bottom: 5mm;
 }
 
-.printable-area h3 {
+.pdf-title-header h2 {
+    font-size: 16pt;
+    margin: 0;
+    color: #000;
+}
+
+/* NEW: Container for the main content */
+.pdf-main-content {
+    overflow: hidden; /* This is important for the float to work correctly */
+}
+
+/* MODIFIED: Styles for the profile picture */
+.pdf-main-content img {
+    float: right; /* Positions the image to the right */
+    margin-left: 10mm; /* Adds space between the image and the text */
+    margin-bottom: 5mm;
+    max-width: 50mm;  /* Increased max-width for a more prominent photo */
+    max-height: 60mm;
+    border: 1px solid #ccc;
+}
+
+/* NEW: Wrapper for the text fields to keep them together */
+.pdf-info-fields {
+    overflow: hidden;
+}
+
+.pdf-info-fields h3 {
     margin-top: 8mm;
     margin-bottom: 2mm;
     color: #000;
 }
 
-.pdf-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.pdf-header img {
-    max-width: 40mm;
-    max-height: 50mm;
-    border: 1px solid #ccc;
-    /* This places the image on the right corner of the "paper" */
-    float: right; 
-}
-
-.pdf-body p {
+.pdf-info-fields p {
     text-align: left;
     margin: 3mm 0;
     font-size: 12pt;
     color: #000;
-    white-space: pre-wrap; /* Preserves line breaks from textareas */
+    white-space: pre-wrap;
 }
 
-.pdf-body strong {
+.pdf-info-fields strong {
     display: inline-block;
-    width: 150px; /* Aligns the values */
+    width: 150px; 
 }
 
-.pdf-body hr {
+.pdf-info-fields hr {
     border: none;
     border-top: 1px solid #ccc;
     margin: 5mm 0;
